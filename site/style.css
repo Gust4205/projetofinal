@@ -1,0 +1,268 @@
+/* ===== VARIÁVEIS DE COR ===== */
+:root {
+  --cor-primaria: #CB7087;   /* Rosa antigo / Vinho suave */
+  --cor-secundaria: #EDBECA; /* Rosa em pó */
+  --cor-destaque: #FFD6DC;   /* Rosa bebê */
+  --cor-fundo: #FFF1E4;      /* Pêssego / Creme */
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 160px);
+  background-color: var(--cor-fundo); 
+  padding: 20px;
+}
+
+/* ===== CABEÇALHO ===== */
+.navbar.bg-dark {
+  background-color: #4a2632 !important; /* Tom escuro que combina com a paleta */
+  border-bottom: 4px solid var(--cor-primaria);
+}
+
+.navbar-brand img {
+  display: block;
+  max-height: 100px;
+  width: auto;
+  background-color: transparent;
+}
+
+.navbar-brand {
+  min-height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav .nav-link {
+  color: var(--cor-secundaria) !important;
+  font-weight: 600;
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-item.active .nav-link {
+  color: var(--cor-destaque) !important;
+}
+
+.navbar-toggler {
+  border-color: var(--cor-secundaria);
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23EDBECA' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Botão de usuário (Olá, Nome) */
+#user-info {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  border: none;
+  font-weight: 600;
+}
+
+#user-info:hover {
+  background-color: var(--cor-secundaria);
+  color: #2b1a20;
+}
+
+/* ===== GRID DE PRODUTOS ===== */
+.grid-produtos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 16px;
+  border: 2px solid transparent;
+  box-shadow: 0 4px 14px rgba(203, 112, 135, 0.12);
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: var(--cor-primaria);
+  box-shadow: 0 10px 24px rgba(203, 112, 135, 0.25);
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: contain;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  background: var(--cor-fundo);
+}
+
+.nome-produto {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #4a2632;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.descricao {
+  font-size: 14px;
+  color: #7a6c70;
+  flex: 1;
+}
+
+.preco {
+  font-size: 18px;
+  font-weight: bold;
+  color: #4a2632;
+  background: var(--cor-destaque);
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-left: 10px;
+  white-space: nowrap;
+}
+
+/* ===== FORMULÁRIOS ===== */
+form {
+  background: #ffffff;
+  padding: 30px 40px;
+  border-radius: 16px;
+  border-top: 6px solid var(--cor-primaria);
+  box-shadow: 0 8px 24px rgba(203, 112, 135, 0.15);
+  width: 100%;
+  max-width: 500px;
+}
+
+form h1 {
+  color: #4a2632;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #4a2632;
+}
+
+.input_texto,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid var(--cor-secundaria);
+  border-radius: 10px;
+  font-size: 14px;
+  color: #4a2632;
+  background: #fff;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.input_texto:focus,
+select:focus {
+  border-color: var(--cor-primaria);
+  box-shadow: 0 0 0 3px rgba(203, 112, 135, 0.25);
+}
+
+.input_texto[readonly] {
+  background-color: var(--cor-fundo);
+  color: #7a6c70;
+  cursor: not-allowed;
+  border: 2px solid var(--cor-secundaria);
+}
+
+select:disabled {
+  background-color: var(--cor-fundo);
+  color: #7a6c70;
+  cursor: not-allowed;
+  border: 2px solid var(--cor-secundaria);
+}
+
+/* ===== BOTÃO ENVIAR ===== */
+.btn_enviar {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn_enviar:hover {
+  background-color: var(--cor-secundaria);
+  color: #2b1a20; /* Texto escuro para contrastar com o fundo claro do hover */
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(237, 190, 202, 0.45);
+}
+
+.btn_enviar:active {
+  background-color: #4a2632;
+  color: #ffffff;
+  transform: translateY(0);
+}
+
+/* ===== LINKS ===== */
+form a {
+  color: var(--cor-primaria);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+form a:hover {
+  color: #4a2632;
+  text-decoration: underline;
+}
+
+/* ===== TOAST ===== */
+.toast.bg-success {
+  background-color: var(--cor-primaria) !important;
+}
+
+.toast.bg-danger {
+  background-color: #4a2632 !important; /* Tom escuro como alerta */
+}
+
+#navbar-custom {
+  background-color: #4a2632 !important;
+}
+
+/* ===== BADGE DO CARRINHO (Bolinha de contagem no menu) ===== */
+.badge-carrinho {
+  display: inline-block;
+  background-color: var(--cor-destaque);
+  color: #4a2632;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 50%;
+  min-width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  padding: 0 4px;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+/* ===== ITEM DO CARRINHO ===== */
+.item-carrinho {
+  flex-direction: row !important;
+}
